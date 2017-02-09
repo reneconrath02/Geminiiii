@@ -1,4 +1,7 @@
 package org.usfirst.frc.team2557.robot;
+
+import edu.wpi.first.wpilibj.DoubleSolenoid;
+
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
  * to a variable name. This provides flexibility changing wiring, makes checking
@@ -6,7 +9,18 @@ package org.usfirst.frc.team2557.robot;
  * floating around.
  */
 public class RobotMap {
-	public static 
+	public static DoubleSolenoid PistonUpdown;
+	
+	
+	
+	
+	
+	
+	public static void init(){
+		PistonUpdown = new DoubleSolenoid(0, 0);
+	}
+	
+	
     // For example to map the left and right motors, you could define the
     // following variables to use with your drivetrain subsystem.
     // public static int leftMotor = 1;
