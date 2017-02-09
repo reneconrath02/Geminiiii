@@ -7,7 +7,6 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import org.usfirst.frc.team2557.robot.commands.*;
 import org.usfirst.frc.team2557.robot.subsystems.*;
-
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
@@ -23,8 +22,9 @@ public class Robot extends IterativeRobot {
 
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static OI oi;
-	public static IntakeSub intakesub;
+	public static Piston piston;
 	public static Shooter shooter;
+	public static intakeSS intakeSS;
 
     Command autonomousCommand;
     SendableChooser chooser;
@@ -37,10 +37,11 @@ public class Robot extends IterativeRobot {
      */
     public void robotInit() {
     	
-    	intakesub = new IntakeSub();
+    	intakeSS = new intakeSS();
     	shooter = new Shooter();
+    	piston = new Piston();
     	
-    	Intake = new IntakeCom();
+    	
     	Shooter = new ShooterCommand();
     	
     	oi = new OI();
