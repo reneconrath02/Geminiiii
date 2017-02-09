@@ -6,6 +6,9 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  *
  */
 public class Piston extends Subsystem {
+	PistonUpdown.get(){
+		if PistonUpdown = true
+	}
     
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
