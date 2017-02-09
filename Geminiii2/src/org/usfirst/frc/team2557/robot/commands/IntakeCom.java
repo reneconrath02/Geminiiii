@@ -1,5 +1,7 @@
 package org.usfirst.frc.team2557.robot.commands;
 
+import org.usfirst.frc.team2557.robot.Robot;
+
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
@@ -18,7 +20,7 @@ public class IntakeCom extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	
+    	Robot.intakesub.IntakeGo();
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -28,10 +30,12 @@ public class IntakeCom extends Command {
 
     // Called once after isFinished returns true
     protected void end() {
+    	Robot.intakesub.IntakeStop();
     }
 
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
+    	Robot.intakesub.IntakeStop();
     }
 }

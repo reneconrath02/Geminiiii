@@ -25,12 +25,12 @@ public class Robot extends IterativeRobot {
 	public static OI oi;
 	public static IntakeSub intakesub;
 	public static Shooter shooter;
-
+	public static Piston piston;
     Command autonomousCommand;
     SendableChooser chooser;
     Command Intake;
     Command Shooter;
-
+    Command Piston;
     /**
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
@@ -39,9 +39,11 @@ public class Robot extends IterativeRobot {
     	
     	intakesub = new IntakeSub();
     	shooter = new Shooter();
+    	piston = new Piston();
     	
     	Intake = new IntakeCom();
     	Shooter = new ShooterCommand();
+    	Piston = new PistonCommand();
     	
     	oi = new OI();
         

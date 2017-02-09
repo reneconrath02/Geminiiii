@@ -20,8 +20,7 @@ public class PistonCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.PistonUpdown.PistonControl();
-    	
+    	Robot.piston.PistonControl();    	
     }
 
     // Make this return true when this Command no longer needs to run execute()
