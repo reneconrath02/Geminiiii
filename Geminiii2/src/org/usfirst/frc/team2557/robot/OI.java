@@ -1,13 +1,34 @@
 package org.usfirst.frc.team2557.robot;
 
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
+
 import org.usfirst.frc.team2557.robot.commands.ExampleCommand;
+import org.usfirst.frc.team2557.robot.commands.ShooterCommand;
+import org.usfirst.frc.team2557.robot.subsystems.Shooter;
 
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI {
+	public Joystick joystick1;
+	public static JoystickButton button1;
+	public static JoystickButton button2;
+	public static JoystickButton button3;
+	public static JoystickButton button4;
+	public static JoystickButton button5;
+	public static JoystickButton button6;
+	
+	
+	public OI(){
+		joystick1 = new Joystick(0);
+		
+		button1 = new JoystickButton (joystick1, 1);
+		
+		button2 = new JoystickButton (joystick1, 2);
+		button2.whileHeld(new ShooterCommand());
     //// CREATING BUTTONS
     // One type of button is a joystick button which is any button on a joystick.
     // You create one by telling it which joystick it's on and which button
@@ -34,5 +55,6 @@ public class OI {
     // Start the command when the button is released  and let it run the command
     // until it is finished as determined by it's isFinished method.
     // button.whenReleased(new ExampleCommand());
+}
 }
 
