@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import org.usfirst.frc.team2557.robot.commands.ExampleCommand;
 import org.usfirst.frc.team2557.robot.commands.ShooterCommand;
 import org.usfirst.frc.team2557.robot.subsystems.ExampleSubsystem;
+import org.usfirst.frc.team2557.robot.subsystems.Piston;
 import org.usfirst.frc.team2557.robot.subsystems.Shooter;
 
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
@@ -26,6 +27,7 @@ public class Robot extends IterativeRobot {
 	public static OI oi;
 	public static Shooter shooter;
 	public static ShooterCommand shooterCommand;
+	public static Piston PistonUpdown;
 
     Command autonomousCommand;
     SendableChooser chooser;
@@ -41,6 +43,7 @@ public class Robot extends IterativeRobot {
         chooser.addDefault("Default Auto", new ExampleCommand());
         shooter = new Shooter();
         shooterCommand = new ShooterCommand();
+        PistonUpdown = new Piston();
         
       
 //        chooser.addObject("My Auto", new MyAutoCommand());

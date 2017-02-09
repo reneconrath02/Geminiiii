@@ -5,6 +5,7 @@ import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
 import org.usfirst.frc.team2557.robot.commands.ExampleCommand;
+import org.usfirst.frc.team2557.robot.commands.PistonCommand;
 import org.usfirst.frc.team2557.robot.commands.ShooterCommand;
 import org.usfirst.frc.team2557.robot.subsystems.Shooter;
 
@@ -45,6 +46,7 @@ public class OI {
 		button12 = new JoystickButton (joystick1, 12);
 
 		button2.whileHeld(new ShooterCommand());
+		button3.whenPressed(new PistonCommand());;
     //// CREATING BUTTONS
     // One type of button is a joystick button which is any button on a joystick.
     // You create one by telling it which joystick it's on and which button
