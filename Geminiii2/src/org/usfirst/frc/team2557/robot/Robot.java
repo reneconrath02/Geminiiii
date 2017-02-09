@@ -6,10 +6,8 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import org.usfirst.frc.team2557.robot.commands.ExampleCommand;
-import org.usfirst.frc.team2557.robot.commands.ShooterCommand;
 import org.usfirst.frc.team2557.robot.subsystems.ExampleSubsystem;
-import org.usfirst.frc.team2557.robot.subsystems.Piston;
-import org.usfirst.frc.team2557.robot.subsystems.Shooter;
+import org.usfirst.frc.team2557.robot.subsystems.intakeSS;
 
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -22,30 +20,29 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  * directory.
  */
 public class Robot extends IterativeRobot {
+	
 
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static OI oi;
-	public static Shooter shooter;
-	public static ShooterCommand shooterCommand;
-	public static Piston PistonUpdown;
+	public static intakeSS intakeSS;
 
     Command autonomousCommand;
     SendableChooser chooser;
-    Command ShooterCommand;
+    Command intakeincommand;
+    Command intakeoutcommand;
 
     /**
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
      */
     public void robotInit() {
+    	intakeSS = new intakeSS();
+    	
+    	intakeincommand = new intakeincommand();
+    	intakeoutcommand = new intakeoutcommand();
 		oi = new OI();
         chooser = new SendableChooser();
         chooser.addDefault("Default Auto", new ExampleCommand());
-        shooter = new Shooter();
-        shooterCommand = new ShooterCommand();
-        PistonUpdown = new Piston();
-        
-      
 //        chooser.addObject("My Auto", new MyAutoCommand());
         SmartDashboard.putData("Auto mode", chooser);
     }
