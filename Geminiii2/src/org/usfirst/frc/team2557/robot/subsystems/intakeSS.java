@@ -7,21 +7,24 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 /**
  *
  */
-public class IntakeSub extends Subsystem {
-
+public class intakeSS extends Subsystem {
+    
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
+    	
+    	
     }
-    
-    public void IntakeGo(){
-    	RobotMap.Intake.set(1);
+    public void intakein(){
+    	RobotMap.intake.set(1);
     }
-    public void IntakeStop(){
-    	RobotMap.Intake.set(0);
+    public void intakeout(){
+    	RobotMap.intake.set(-1);
+    }
+    public void intakestop(){
+    	RobotMap.intake.set(0);
     }
 }
-

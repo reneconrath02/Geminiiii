@@ -1,13 +1,15 @@
 package org.usfirst.frc.team2557.robot.commands;
 
+import org.usfirst.frc.team2557.robot.Robot;
+
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
  *
  */
-public class IntakeCom extends Command {
+public class intakeoutcommand extends Command {
 
-    public IntakeCom() {
+    public intakeoutcommand() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     }
@@ -18,7 +20,7 @@ public class IntakeCom extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	
+    	Robot.intakeSS.intakeout();
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -28,10 +30,12 @@ public class IntakeCom extends Command {
 
     // Called once after isFinished returns true
     protected void end() {
+    	Robot.intakeSS.intakestop();
     }
 
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
+    	Robot.intakeSS.intakestop();
     }
 }
