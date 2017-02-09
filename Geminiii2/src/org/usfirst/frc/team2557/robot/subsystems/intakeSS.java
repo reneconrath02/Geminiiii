@@ -19,12 +19,12 @@ public class intakeSS extends Subsystem {
     	
     }
     public void intakein(){
-    	RobotMap.intake.set(1);
+    	RobotMap.Intake.set(1);
     }
     public void intakeout(){
-    	RobotMap.intake.set(-1);
+    	RobotMap.Intake.set(-1);
     }
     public void intakestop(){
-    	RobotMap.intake.set(0);
+    	RobotMap.Intake.set(0);
     }
 }
