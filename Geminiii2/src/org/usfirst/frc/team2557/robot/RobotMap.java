@@ -1,5 +1,7 @@
 package org.usfirst.frc.team2557.robot;
 
+import com.ctre.CANTalon;
+
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 
 /**
@@ -11,6 +13,9 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
 public class RobotMap {
 	public static DoubleSolenoid PistonUpdown;
 	
+	public static CANTalon Shooting1;
+	
+	public static CANTalon Shooting2;
 	
 	
 	
@@ -18,6 +23,10 @@ public class RobotMap {
 	
 	public static void init(){
 		PistonUpdown = new DoubleSolenoid(0, 0);
+		
+		Shooting1 = new CANTalon(0);
+		Shooting2 = new CANTalon(0);
+		
 	}
 	
 	
