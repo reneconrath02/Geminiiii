@@ -16,13 +16,31 @@ public class OI {
 	public Joystick joystick1;
 	public JoystickButton joystickbutton1;
 	public JoystickButton joystickbutton2;
-	
-	
+	public JoystickButton joystickbutton3;
+	public JoystickButton joystickbutton4;
+	public JoystickButton joystickbutton5;
+	public JoystickButton joystickbutton6;
+	public JoystickButton joystickbutton7;
+	public JoystickButton joystickbutton8;
+	public JoystickButton joystickbutton9;
+	public JoystickButton joystickbutton10;
+	public JoystickButton joystickbutton11;
+	public JoystickButton joystickbutton12;
 	public OI(){
 		joystick1 = new Joystick(0);
 		
 		joystickbutton1 = new JoystickButton(joystick1, 1);
 		joystickbutton2 = new JoystickButton(joystick1, 2);
+		joystickbutton1 = new JoystickButton(joystick1, 3);
+		joystickbutton2 = new JoystickButton(joystick1, 4);
+		joystickbutton1 = new JoystickButton(joystick1, 5);
+		joystickbutton2 = new JoystickButton(joystick1, 6);
+		joystickbutton1 = new JoystickButton(joystick1, 7);
+		joystickbutton2 = new JoystickButton(joystick1, 8);
+		joystickbutton1 = new JoystickButton(joystick1, 9);
+		joystickbutton2 = new JoystickButton(joystick1, 10);
+		joystickbutton1 = new JoystickButton(joystick1, 11);
+		joystickbutton2 = new JoystickButton(joystick1, 12);
 		joystickbutton1.whileHeld(new intakeincommand());
 		joystickbutton2.whileHeld(new intakeoutcommand());
 				
