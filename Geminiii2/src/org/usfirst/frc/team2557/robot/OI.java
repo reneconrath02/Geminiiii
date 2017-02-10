@@ -28,6 +28,7 @@ public class OI {
 	public static JoystickButton button12;
 	
 	public OI(){
+		
 		joystick1 = new Joystick(0);
 		
 		button1 = new JoystickButton (joystick1, 1);
