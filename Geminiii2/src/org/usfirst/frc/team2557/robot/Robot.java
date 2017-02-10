@@ -44,8 +44,8 @@ public class Robot extends IterativeRobot {
     	
     	
     	Shooter = new ShooterCommand();
-    	IntakeIn = new IntakeInCommand(};
-    	IntakeOut = new IntakeOutCommand(};				       
+    	IntakeIn = new intakeincommand();
+    	IntakeOut = new intakeoutcommand();				       
     	oi = new OI();
         
     	chooser = new SendableChooser();
