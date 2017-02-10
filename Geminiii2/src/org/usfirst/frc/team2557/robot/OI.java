@@ -4,9 +4,7 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
-import org.usfirst.frc.team2557.robot.commands.ExampleCommand;
-import org.usfirst.frc.team2557.robot.commands.intakeincommand;
-import org.usfirst.frc.team2557.robot.commands.intakeoutcommand;
+import org.usfirst.frc.team2557.robot.commands.*;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -28,21 +26,22 @@ public class OI {
 	public JoystickButton joystickbutton10;
 	public JoystickButton joystickbutton11;
 	public JoystickButton joystickbutton12;
+	
 	public OI(){
 		joystick1 = new Joystick(0);
 		
 		joystickbutton1 = new JoystickButton(joystick1, 1);
 		joystickbutton2 = new JoystickButton(joystick1, 2);
-		joystickbutton1 = new JoystickButton(joystick1, 3);
-		joystickbutton2 = new JoystickButton(joystick1, 4);
-		joystickbutton1 = new JoystickButton(joystick1, 5);
-		joystickbutton2 = new JoystickButton(joystick1, 6);
-		joystickbutton1 = new JoystickButton(joystick1, 7);
-		joystickbutton2 = new JoystickButton(joystick1, 8);
-		joystickbutton1 = new JoystickButton(joystick1, 9);
-		joystickbutton2 = new JoystickButton(joystick1, 10);
-		joystickbutton1 = new JoystickButton(joystick1, 11);
-		joystickbutton2 = new JoystickButton(joystick1, 12);
+		joystickbutton3 = new JoystickButton(joystick1, 3);
+		joystickbutton4 = new JoystickButton(joystick1, 4);
+		joystickbutton5 = new JoystickButton(joystick1, 5);
+		joystickbutton6 = new JoystickButton(joystick1, 6);
+		joystickbutton7 = new JoystickButton(joystick1, 7);
+		joystickbutton8 = new JoystickButton(joystick1, 8);
+		joystickbutton9 = new JoystickButton(joystick1, 9);
+		joystickbutton10 = new JoystickButton(joystick1, 10);
+		joystickbutton11 = new JoystickButton(joystick1, 11);
+		joystickbutton12 = new JoystickButton(joystick1, 12);
 		
 		
 		joystickbutton1.whileHeld(new intakeincommand());
