@@ -28,8 +28,9 @@ public class Robot extends IterativeRobot {
 
     Command autonomousCommand;
     SendableChooser chooser;
-    Command Intake;
+    Command IntakeIn;
     Command Shooter;
+    Command IntakeOut;
 
     /**
      * This function is run when the robot is first started up and should be
@@ -43,7 +44,8 @@ public class Robot extends IterativeRobot {
     	
     	
     	Shooter = new ShooterCommand();
-    	
+    	IntakeIn = new IntakeInCommand(};
+    	IntakeOut = new IntakeOutCommand(};				       
     	oi = new OI();
         
     	chooser = new SendableChooser();
