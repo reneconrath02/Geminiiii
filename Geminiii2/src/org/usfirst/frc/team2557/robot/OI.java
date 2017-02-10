@@ -13,7 +13,9 @@ import org.usfirst.frc.team2557.robot.commands.intakeoutcommand;
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI {
+	
 	public Joystick joystick1;
+	
 	public JoystickButton joystickbutton1;
 	public JoystickButton joystickbutton2;
 	public JoystickButton joystickbutton3;
@@ -41,6 +43,8 @@ public class OI {
 		joystickbutton2 = new JoystickButton(joystick1, 10);
 		joystickbutton1 = new JoystickButton(joystick1, 11);
 		joystickbutton2 = new JoystickButton(joystick1, 12);
+		
+		
 		joystickbutton1.whileHeld(new intakeincommand());
 		joystickbutton2.whileHeld(new intakeoutcommand());
 				
