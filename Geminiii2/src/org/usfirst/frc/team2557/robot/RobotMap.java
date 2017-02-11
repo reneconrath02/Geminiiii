@@ -15,10 +15,8 @@ public class RobotMap {
 
 	
 	public static CANTalon LeftFront;
-	public static CANTalon LeftMid;
 	public static CANTalon LeftBack;
 	public static CANTalon RightFront;
-	public static CANTalon RightMid;
 	public static CANTalon RightBack;
 	public static CANTalon Shooting1;
 	public static CANTalon Shooting2;
@@ -27,23 +25,25 @@ public class RobotMap {
 	public static RobotDrive drive1;
 	public static RobotDrive drive2;
 	
-	public static DoubleSolenoid PistonUpdown;
+	public static DoubleSolenoid fuelGate;
+	public static DoubleSolenoid shifter;
+	public static DoubleSolenoid gearGrab;
 	
 	public static void init(){
 		
 		
-		LeftFront = new CANTalon(0);
-		LeftMid = new CANTalon(0);
-		LeftBack = new CANTalon(0);
-		RightFront = new CANTalon(0);
-		RightMid = new CANTalon(0);
-		RightBack = new CANTalon(0);
+		LeftFront = new CANTalon(1);
+		LeftBack = new CANTalon(2);
+		RightFront = new CANTalon(3);
+		RightBack = new CANTalon(4);
 
-		Shooting1 = new CANTalon(0);
-		Shooting2 = new CANTalon(0);
-		Intake = new CANTalon(0); //Number will be changed to correct port when informed of correct port
+		Shooting1 = new CANTalon(5);
+		Shooting2 = new CANTalon(6);
+		Intake = new CANTalon(7);
 		
-		PistonUpdown = new DoubleSolenoid(0, 0);
+		fuelGate = new DoubleSolenoid(0,1);
+		shifter = new DoubleSolenoid(2,3);
+		gearGrab = new DoubleSolenoid(4,5);
 	}
 	
 	

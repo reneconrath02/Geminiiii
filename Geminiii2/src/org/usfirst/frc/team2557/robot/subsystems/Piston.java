@@ -11,11 +11,11 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 public class Piston extends Subsystem {
 	public void PistonControl(){
 
-		if(RobotMap.PistonUpdown.get() == Value.kReverse){
-			RobotMap.PistonUpdown.set(Value.kForward);
+		if(RobotMap.fuelGate.get() == Value.kReverse){
+			RobotMap.fuelGate.set(Value.kForward);
 		}
-		else if (RobotMap.PistonUpdown.get() ==Value.kForward){
-			RobotMap.PistonUpdown.set(Value.kReverse);
+		else if (RobotMap.fuelGate.get() ==Value.kForward){
+			RobotMap.fuelGate.set(Value.kReverse);
 		}
 	}
     
