@@ -38,6 +38,8 @@ public class Robot extends IterativeRobot {
      */
     public void robotInit() {
     	
+    	RobotMap.init();
+    	
     	intakeSS = new intakeSS();
     	shooter = new Shooter();
     	piston = new Piston();
