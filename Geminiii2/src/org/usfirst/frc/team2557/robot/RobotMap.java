@@ -3,6 +3,7 @@ package org.usfirst.frc.team2557.robot;
 import com.ctre.CANTalon;
 
 import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.RobotDrive;
 
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
@@ -11,24 +12,38 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
  * floating around.
  */
 public class RobotMap {
-	public static DoubleSolenoid PistonUpdown;
+
 	
+	public static CANTalon LeftFront;
+	public static CANTalon LeftMid;
+	public static CANTalon LeftBack;
+	public static CANTalon RightFront;
+	public static CANTalon RightMid;
+	public static CANTalon RightBack;
 	public static CANTalon Shooting1;
-	
 	public static CANTalon Shooting2;
-	
 	public static CANTalon Intake;
 	
+	public static RobotDrive drive1;
+	public static RobotDrive drive2;
 	
+	public static DoubleSolenoid PistonUpdown;
 	
 	public static void init(){
-		PistonUpdown = new DoubleSolenoid(0, 0);
 		
+		
+		LeftFront = new CANTalon(0);
+		LeftMid = new CANTalon(0);
+		LeftBack = new CANTalon(0);
+		RightFront = new CANTalon(0);
+		RightMid = new CANTalon(0);
+		RightBack = new CANTalon(0);
+
 		Shooting1 = new CANTalon(0);
 		Shooting2 = new CANTalon(0);
-		
 		Intake = new CANTalon(0); //Number will be changed to correct port when informed of correct port
 		
+		PistonUpdown = new DoubleSolenoid(0, 0);
 	}
 	
 	
