@@ -44,8 +44,8 @@ public class OI {
 		joystickbutton12 = new JoystickButton(joystick1, 12);
 		
 		
-		joystickbutton1.toggleWhenPressed(new intakeincommand());
-		joystickbutton2.toggleWhenPressed(new intakeoutcommand());
+		joystickbutton1.whileHeld(new intakeincommand());
+		joystickbutton2.whileHeld(new intakeoutcommand());
 				
 				
 	}
