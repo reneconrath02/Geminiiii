@@ -19,6 +19,7 @@ public class RobotMap {
 	
 	public static CANTalon Intake;
 	
+	public static CANTalon Agitator;
 	
 	
 	public static void init(){
@@ -28,6 +29,8 @@ public class RobotMap {
 		Shooting2 = new CANTalon(0);
 		
 		Intake = new CANTalon(0); //Number will be changed to correct port when informed of correct port
+		
+		Agitator = new CANTalon(0);
 		
 	}
 	

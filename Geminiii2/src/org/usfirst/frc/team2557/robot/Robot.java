@@ -25,12 +25,14 @@ public class Robot extends IterativeRobot {
 	public static Piston piston;
 	public static Shooter shooter;
 	public static intakeSS intakeSS;
+	public static Agitator agitator;
 
     Command autonomousCommand;
     SendableChooser chooser;
     Command IntakeIn;
     Command Shooter;
     Command IntakeOut;
+    Command Agitator;
 
     /**
      * This function is run when the robot is first started up and should be
@@ -43,11 +45,13 @@ public class Robot extends IterativeRobot {
     	intakeSS = new intakeSS();
     	shooter = new Shooter();
     	piston = new Piston();
+    	agitator = new Agitator();
     	
     	
     	Shooter = new ShooterCommand();
     	IntakeIn = new intakeincommand();
-    	IntakeOut = new intakeoutcommand();				       
+    	IntakeOut = new intakeoutcommand();		
+    	Agitator = new AgitatorCommand();
     	oi = new OI();
         
     	chooser = new SendableChooser();
